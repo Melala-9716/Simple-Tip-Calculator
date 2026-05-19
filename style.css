@@ -1,0 +1,55 @@
+      *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgba(254, 238, 218, 0.649);
+        }
+        .section{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            margin: 100px 400px;
+            border: 2px solid white;
+            background-color: white;
+            width: 600px;
+            height: 400px;
+            box-shadow: 0 0 10px rgba(31, 31, 31,1);
+            border-radius: 10px;
+        }
+        .section h1{
+            text-align: center;
+          padding:10px 0px;
+          font-size: 3rem;
+        }
+        .section p{
+            padding: 10px 10px;
+            font-size: 1.2rem;
+        }
+        .section input{
+            padding:10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: 10px;
+        }
+        .section button{
+            margin: 10px 10px;
+            height: 40px;
+            font-size: 30px;
+            background-color: green;
+            color: white;
+            border-radius: 10px;
+            border: none;
+        }
+       @media (max-width: 768px) {
+       .section{
+            margin: 100px 6px;
+            width: 97%;
+        }
+}
+@media (max-width: 1024px) {
+    .section{
+            margin: 100px 6px;
+            width: 98%;
+        }
+}
