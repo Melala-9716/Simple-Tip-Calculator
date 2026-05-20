@@ -51,7 +51,7 @@
             border-radius: 20px;
         }
         #color-button{
-            margin-left: 880px;
+            margin-left: 650px;
             margin-top: 10px;
             border-radius: 20px;
             border: none;
@@ -61,13 +61,21 @@
             background-color: black;
             color:white;
         }
+        #currency{
+            padding:10px;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-right: 10px;
+            border-radius: 10px;
+        }
        @media (max-width: 768px) {
        .section{
-            margin: 100px 6px;
+            margin: 5px 5px;
             width: 97%;
         }
         #color-button{
-            width: 100px;
+            margin-left:0px;
+            margin-top: 10px;
         }
 }
 @media (max-width: 1024px) {
@@ -76,6 +84,6 @@
             width: 98%;
         }
         #color-button{
-            margin-left: 600px;
+            margin-left: 300px;
         }
 }

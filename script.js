@@ -5,7 +5,9 @@
         const Numberofpeople=document.getElementById("Number-of-people");
         const reset=document.getElementById("btn-1");
         const color=document.getElementById("color-button");
+        const currency=document.getElementById("currency");
         function calculate(){
+          let currency1=currency.value;
          let bill=Bill.value;
          let tip=Tip.value;
         let number=Numberofpeople.value;
@@ -27,20 +29,31 @@
          let total=billvalue+(billvalue*(tipvalue/100));
          let split=total/numbervalue;
           Total.textContent=`Total:${ total.toFixed(2)}`;
-          if(numbervalue===1){
-            Total.textContent=`You Pay:${ total.toFixed(2)}`;
-          }
-          else{
-            Total.textContent=`Each of you pays total :${ split.toFixed(2)}`;
-          }
           const Billcard=document.getElementById("bill-card");
           const Tipcard=document.getElementById("tip-card");
           const Totalcard=document.getElementById("total-card");
           const peoplecard=document.getElementById("people-card");
-          Billcard.textContent=`Bill:${billvalue.toFixed(2)}`;
-          Tipcard.textContent=`Tip:${tipvalue.toFixed(2)}`;
-          Totalcard.textContent=`Total:${total.toFixed(2)}`;
+          if(currency1==="$" ||currency1==="€" ||currency1==="£" || currency1==="¥"|| currency1==="₹" ){
+          Billcard.textContent=`Bill:${currency1}${billvalue.toFixed(2)}`;
+          Tipcard.textContent=`Tip:${currency1}${tipvalue.toFixed(2)}`;
+          Totalcard.textContent=`Total:${currency1}${total.toFixed(2)}`;
           peoplecard.textContent=`People:${number}`;
+          }
+          else{
+Billcard.textContent=`Bill:${billvalue.toFixed(2) } ${currency1}`;
+          Tipcard.textContent=`Tip:${tipvalue.toFixed(2)}${currency1}`;
+          Totalcard.textContent=`Total:${total.toFixed(2)} ${currency1}`;
+          peoplecard.textContent=`People:${number}`;
+          }
+           if(numbervalue===1 & currency1==="ETB"){
+            Total.textContent=`You Pay:${ total.toFixed(2)} ${currency1}`;
+          }
+          else if (numbervalue=!1 && currency1==="ETB"){
+            Total.textContent=`Each of you pays :${ split.toFixed(2)} ${currency1}`;
+          }
+          else{
+            Total.textContent=`Each of you pays :${currency1} ${ split.toFixed(2)}`
+          }
         }
         result.addEventListener("click",calculate
         );
@@ -70,6 +83,7 @@
         // DARK MODE
         document.body.style.backgroundColor = "black";
         color.textContent = "Light Mode";
+    
 
         section.forEach((item) => {
             item.style.backgroundColor = "#1f1f1f";
