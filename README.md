@@ -47,7 +47,7 @@ Tip-calculator/
 ---
 
 ## 🚀 Live Demo
-👉 https://simple-tip-calculator-web.netlify.app/
+👉https://quicktip-calculator-simple.netlify.app/
 
 ---
 
