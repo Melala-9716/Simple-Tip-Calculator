@@ -65,20 +65,7 @@
             margin-right: 10px;
             border-radius: 10px;
         }
-       @media (max-width: 768px) {
-       #section{
-            margin: 5px 5px;
-            width: 97%;
-        }
-        #modes{
-       column-gap: 300px;
-        margin-top: 30px;
-        font-size: 20px;
-        font-weight: 900;
-            margin-left:10px;
-        }
-}
-@media (max-width: 1024px) {
+        @media (max-width: 1024px) {
     #section{
             margin: 100px 6px;
             width: 98%;
@@ -87,9 +74,22 @@
             margin-left: 300px;
         }
              #modes{
-       column-gap: 600px;
+           column-gap: 620px;
         margin-top: 30px;
         font-size: 20px;
         font-weight: 900;
-            margin-left:20px;}
+        margin-left:20px;}
+}
+       @media (max-width: 768px) {
+       #section{
+            margin: 30px 5px;
+            width: 97%;
+        }
+        #modes{
+       column-gap: 320px;
+        margin-top: 40px;
+        font-size: 20px;
+        font-weight: 900;
+        margin-left:10px;
+        }
 }
