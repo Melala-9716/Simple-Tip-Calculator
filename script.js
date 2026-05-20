@@ -63,31 +63,29 @@ Billcard.textContent=`Bill:${billvalue.toFixed(2) } ${currency1}`;
           Numberofpeople.value="";
           Total.textContent=`00.00`;
         });
-    color.addEventListener("click", () => {
-
-    const section = document.querySelectorAll(".section");
-
+    let mode=document.getElementById("mode");
+   mode.addEventListener("click", () => {
+  const text=document.getElementById("text");
+  const section=document.getElementById("section");
+  const description=document.getElementById("discription");
     if (document.body.style.backgroundColor === "black") {
-
-        // LIGHT MODE
         document.body.style.backgroundColor = "rgba(254, 238, 218, 0.649)";
-        color.textContent = "Dark Mode";
-
-        section.forEach((item) => {
-            item.style.backgroundColor = "white";
-            item.style.color = "black";
-        });
-
+        mode.textContent = "🌙";
+       text.textContent="Light Mode"
+       text.style.color="Black";
+       section.style.boxShadow="0 0 25px white"
+       description.style.backgroundColor="antiquewhite"
+       section.style.backgroundColor="white";
+       section.style.color="black";
     } else {
 
-        // DARK MODE
         document.body.style.backgroundColor = "black";
-        color.textContent = "Light Mode";
-    
-
-        section.forEach((item) => {
-            item.style.backgroundColor = "#1f1f1f";
-            item.style.color = "white";
-        });
+        mode.textContent = "☀️";
+        text.style.color="white";
+        text.textContent="Dark Mode"
+        section.style.backgroundColor="rgba(0, 0, 0, 0.274)";
+        section.style.color="white";
+        section.style.boxShadow="0 0 25px white"
+        description.style.backgroundColor="silver"
     }
 });

@@ -5,7 +5,7 @@
         body{
             background-color: rgba(254, 238, 218, 0.649);
         }
-        .section{
+        #section{
             display: flex;
             flex-direction: column;
             align-items: left;
@@ -17,22 +17,22 @@
             box-shadow: 0 0 10px rgba(31, 31, 31,1);
             border-radius: 10px;
         }
-        .section h1{
+        #section h1{
             text-align: center;
           padding:10px 0px;
           font-size: 3rem;
         }
-        .section p{
+        #section p{
             padding: 10px 10px;
             font-size: 1.2rem;
         }
-        .section input{
+        #section input{
             padding:10px;
             margin-left: 10px;
             margin-right: 10px;
             border-radius: 10px;
         }
-        .section button{
+        #section button{
             margin: 10px 10px;
             height: 40px;
             font-size: 30px;
@@ -50,17 +50,14 @@
             border: 1px solid black;
             border-radius: 20px;
         }
-        #color-button{
-            margin-left: 650px;
-            margin-top: 10px;
-            border-radius: 20px;
-            border: none;
-            width: 100px;
-            font-size: 15px;
-            font-weight: 800;
-            background-color: black;
-            color:white;
-        }
+       #modes{
+        display: flex;
+       column-gap: 460px;
+        margin-left: 400px;
+        margin-top: 30px;
+        font-size: 20px;
+        font-weight: 900;
+       }
         #currency{
             padding:10px;
             margin-left: 10px;
@@ -69,21 +66,30 @@
             border-radius: 10px;
         }
        @media (max-width: 768px) {
-       .section{
+       #section{
             margin: 5px 5px;
             width: 97%;
         }
-        #color-button{
-            margin-left:0px;
-            margin-top: 10px;
+        #modes{
+       column-gap: 300px;
+        margin-top: 30px;
+        font-size: 20px;
+        font-weight: 900;
+            margin-left:10px;
         }
 }
 @media (max-width: 1024px) {
-    .section{
+    #section{
             margin: 100px 6px;
             width: 98%;
         }
         #color-button{
             margin-left: 300px;
         }
+             #modes{
+       column-gap: 600px;
+        margin-top: 30px;
+        font-size: 20px;
+        font-weight: 900;
+            margin-left:20px;}
 }
